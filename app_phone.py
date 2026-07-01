@@ -19,7 +19,7 @@ from pathlib import Path
 # إعدادات عامة
 # =========================
 st.set_page_config(
-    page_title="تكوين العلائق العلفية لتغذية الماشية",
+    page_title=""علف-حاسبةالآعلاف ",
     page_icon="🌿",
     layout="centered",
 )
@@ -969,7 +969,7 @@ st.markdown(
     f"""
     <div class="app-hero">
         {logo_tag}
-        <div class="app-hero-title">حاسبة الاعلاف لقياس تكلفة العليقة و كميات القطيع </div>
+        <div class="app-hero-title">"علف-حاسبةالآعلاف</div>
         <div class="app-hero-subtitle">
             ضأن <span class="gold-dot"></span>
             ماعز <span class="gold-dot"></span>
