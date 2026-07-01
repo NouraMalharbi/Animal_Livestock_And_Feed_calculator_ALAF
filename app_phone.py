@@ -34,7 +34,7 @@ LIGHT_BG = "#F7F6FB"
 
 NO_PRICE_TEXT = "لا يوجد معلومات عن السعر"
 PRICE_INDICATOR_URL = "https://sanabilaljouf.com.sa/ar/price-indicator"
-FILE_PATH  = "Livestock_NRC_v2 _final.xlsx"
+FILE_PATH  = "Livestock_NRC_v2.xlsx"
 WEB_LOGO_PATH  = "white_logo_nlfdp.png"
 PRINT_LOGO_PATH = "NLFDP_full.png"
 
