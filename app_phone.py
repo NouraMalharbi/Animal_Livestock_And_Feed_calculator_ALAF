@@ -19,7 +19,7 @@ from pathlib import Path
 # إعدادات عامة
 # =========================
 st.set_page_config(
-    page_title="تكوين العلائق العلفية لتغذية الماشية",
+    page_title="علف -حاسبة الاعلاف ",
     page_icon="🌿",
     layout="centered",
 )
@@ -918,60 +918,72 @@ def inject_css():
                 text-align: right;
             }}
             .gauge-row {{
-                margin-bottom: 28px;
+                margin-bottom: 24px;
             }}
             .gauge-label-row {{
-                display: block;
-                margin-bottom: 12px;
-                min-height: 72px;
+                display: grid;
+                grid-template-columns: minmax(92px, 0.9fr) minmax(0, 1.1fr);
+                align-items: start;
+                column-gap: 10px;
+                row-gap: 2px;
+                margin-bottom: 8px;
+                min-height: 0;
             }}
             .gauge-name,
             .gauge-value {{
                 display: block;
                 width: 100%;
-                white-space: normal;
             }}
             .gauge-name {{
-                font-size: 0.92rem;
-                line-height: 1.35;
-                margin-bottom: 6px;
+                grid-column: 2;
+                text-align: right;
+                font-size: 0.90rem;
+                line-height: 1.28;
+                margin-bottom: 0;
+                white-space: normal;
             }}
             .gauge-name small {{
                 display: block;
                 margin-right: 0;
-                margin-top: 2px;
-                font-size: 0.72rem;
+                margin-top: 3px;
+                font-size: 0.70rem;
+                line-height: 1.25;
             }}
             .gauge-value {{
-                font-size: 0.88rem;
-                line-height: 1.35;
+                grid-column: 1;
+                align-self: center;
+                justify-self: start;
+                direction: ltr;
+                text-align: left;
+                font-size: 0.90rem;
+                line-height: 1.2;
+                white-space: nowrap;
             }}
             .gauge-marker {{
-                top: 86px;
+                top: 56px;
             }}
             .gauge-marker-line {{
-                top: 94px;
+                top: 64px;
                 height: 8px;
             }}
             .gauge-tooltip {{
                 display: none;
             }}
             .gauge-scale-labels {{
-                display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-                gap: 4px;
+                display: flex;
+                gap: 0;
                 margin-top: 8px;
-                font-size: 0.44rem;
+                font-size: 0.41rem;
                 direction: ltr;
             }}
             .gauge-scale-labels span {{
-                width: auto !important;
+                min-width: 0;
                 white-space: normal;
-                line-height: 1.2;
+                line-height: 1.15;
                 gap: 2px;
             }}
             .gauge-scale-labels small {{
-                font-size: 0.40rem;
+                font-size: 0.39rem;
             }}
             .rec-feed-table-wide {{
                 min-width: 0;
@@ -1041,7 +1053,7 @@ st.markdown(
     f"""
     <div class="app-hero">
         {logo_tag}
-        <div class="app-hero-title">حاسبة الاعلاف لقياس تكلفة العليقة و كميات القطيع </div>
+        <div class="app-hero-title">علف - حاسبة الاعلاف </div>
         <div class="app-hero-subtitle">
             ضأن <span class="gold-dot"></span>
             ماعز <span class="gold-dot"></span>
