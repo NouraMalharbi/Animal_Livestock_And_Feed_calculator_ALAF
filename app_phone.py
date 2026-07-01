@@ -969,7 +969,7 @@ st.markdown(
     f"""
     <div class="app-hero">
         {logo_tag}
-        <div class="app-hero-title">علف- حاسبةالآعلاف </div>
+        <div class="app-hero-title"> علف-حاسبةالآعلاف</div>
         <div class="app-hero-subtitle">
             ضأن <span class="gold-dot"></span>
             ماعز <span class="gold-dot"></span>
