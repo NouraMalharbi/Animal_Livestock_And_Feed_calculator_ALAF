@@ -19,7 +19,7 @@ from pathlib import Path
 # إعدادات عامة
 # =========================
 st.set_page_config(
-    page_title="علف- حاسبة الآعلاف ",
+    page_title="تكوين العلائق العلفية لتغذية الماشية",
     page_icon="🌿",
     layout="centered",
 )
@@ -34,9 +34,9 @@ LIGHT_BG = "#F7F6FB"
 
 NO_PRICE_TEXT = "لا يوجد معلومات عن السعر"
 PRICE_INDICATOR_URL = "https://sanabilaljouf.com.sa/ar/price-indicator"
-FILE_PATH  = "data/Livestock_NRC_v2.xlsx"
-WEB_LOGO_PATH  = "assets/white_logo_nlfdp.png"
-PRINT_LOGO_PATH = "assets/NLFDP_full.png"
+FILE_PATH  = "Livestock_NRC_v2 _final.xlsx"
+WEB_LOGO_PATH  = "white_logo_nlfdp.png"
+PRINT_LOGO_PATH = "NLFDP_full.png"
 
 SPECIES_SHEETS = {
     "ضأن - النعاج (الأمهات)":    "Sheep_Ewes",
@@ -774,6 +774,16 @@ def inject_css():
                 padding-right: 0.75rem;
                 max-width: 100%;
             }}
+            .main .block-container,
+            .section-card,
+            .selected-feeds-box,
+            .price-panel-available-box,
+            .price-panel-section,
+            .rec-card-wide,
+            .rec-grid-header {{
+                direction: rtl;
+                text-align: right;
+            }}
             .app-hero {{
                 padding: 18px 16px 16px;
                 margin-bottom: 18px;
@@ -810,14 +820,25 @@ def inject_css():
             .metric-strip {{
                 gap: 8px;
                 margin-bottom: 14px;
+                justify-content: flex-start;
             }}
             .metric-pill {{
                 font-size: 0.70rem;
                 padding: 6px 10px;
             }}
+            .selected-feeds-box {{
+                line-height: 2;
+            }}
+            .chip-badge {{
+                direction: rtl;
+            }}
             .checkout-feed-heading {{
+                display: table;
                 font-size: 0.72rem;
                 padding: 4px 10px;
+                margin-right: 0;
+                margin-left: auto;
+                text-align: right;
             }}
             .feed-pill-card {{
                 min-height: 104px;
@@ -893,13 +914,64 @@ def inject_css():
             .rec-price-value {{
                 font-size: 0.92rem;
             }}
+            .rec-col-title {{
+                text-align: right;
+            }}
+            .gauge-row {{
+                margin-bottom: 28px;
+            }}
             .gauge-label-row {{
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 3px;
+                display: block;
+                margin-bottom: 12px;
+                min-height: 72px;
+            }}
+            .gauge-name,
+            .gauge-value {{
+                display: block;
+                width: 100%;
+                white-space: normal;
+            }}
+            .gauge-name {{
+                font-size: 0.92rem;
+                line-height: 1.35;
+                margin-bottom: 6px;
+            }}
+            .gauge-name small {{
+                display: block;
+                margin-right: 0;
+                margin-top: 2px;
+                font-size: 0.72rem;
+            }}
+            .gauge-value {{
+                font-size: 0.88rem;
+                line-height: 1.35;
+            }}
+            .gauge-marker {{
+                top: 86px;
+            }}
+            .gauge-marker-line {{
+                top: 94px;
+                height: 8px;
+            }}
+            .gauge-tooltip {{
+                display: none;
             }}
             .gauge-scale-labels {{
-                font-size: 0.47rem;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 4px;
+                margin-top: 8px;
+                font-size: 0.44rem;
+                direction: ltr;
+            }}
+            .gauge-scale-labels span {{
+                width: auto !important;
+                white-space: normal;
+                line-height: 1.2;
+                gap: 2px;
+            }}
+            .gauge-scale-labels small {{
+                font-size: 0.40rem;
             }}
             .rec-feed-table-wide {{
                 min-width: 0;
@@ -969,7 +1041,7 @@ st.markdown(
     f"""
     <div class="app-hero">
         {logo_tag}
-        <div class="app-hero-title"> علف- حاسبة الآعلاف </div>
+        <div class="app-hero-title">حاسبة الاعلاف لقياس تكلفة العليقة و كميات القطيع </div>
         <div class="app-hero-subtitle">
             ضأن <span class="gold-dot"></span>
             ماعز <span class="gold-dot"></span>
