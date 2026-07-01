@@ -35,8 +35,8 @@ LIGHT_BG = "#F7F6FB"
 NO_PRICE_TEXT = "لا يوجد معلومات عن السعر"
 PRICE_INDICATOR_URL = "https://sanabilaljouf.com.sa/ar/price-indicator"
 FILE_PATH  = "data/Livestock_NRC_v2.xlsx"
-WEB_LOGO_PATH  = "white_logo_nlfdp.png"
-PRINT_LOGO_PATH = "NLFDP_full.png"
+WEB_LOGO_PATH  = "assets/white_logo_nlfdp.png"
+PRINT_LOGO_PATH = "assets/NLFDP_full.png"
 
 SPECIES_SHEETS = {
     "ضأن - النعاج (الأمهات)":    "Sheep_Ewes",
