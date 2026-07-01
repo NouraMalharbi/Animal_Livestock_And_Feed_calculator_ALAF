@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Livestock Feed Calculator
 
 Arabic Streamlit application for building livestock feed recommendations, estimating feed quantities, and generating printable feeding-plan reports for farms.
@@ -85,20 +85,7 @@ If you move the app to a new machine or repository, keep these files in the same
 
 ## Repository Structure
 
-```text
-Livstock_Feed_calulator/
-├── branded_feed_calulatr_V5.py
-├── branded_feed_calulatr_V6.py
-├── branded_feed_calulatr_V7.py
-├── phone-display.py
-├── Livestock_NRC_v2 _final.xlsx
-├── NLFDP.png
-├── white_logo_nlfdp.png
-├── Livestock_feed_calculator_pkg/
-│   ├── app.py
-│   └── requirements.txt
-└── daily_captures/
-```
+
 
 ## Notes
 
@@ -106,20 +93,8 @@ Livstock_Feed_calulator/
 - The printable report uses a different logo asset from the web app.
 - Market-price extraction and comparison helper scripts are included in the repository, but they are not required to run the main Streamlit app.
 
-## Suggested GitHub Repo Setup
 
-If you want to publish this folder as a standalone GitHub repository, a typical flow is:
-
-```bash
-cd transit/Norah/Livstock_Feed_calulator
-git init
-git add .
-git commit -m "Initial commit: livestock feed calculator"
-gh repo create livestock-feed-calculator --public --source=. --remote=origin --push
 ```
-
-If this folder remains inside a larger repository, you may prefer to create a new GitHub repo manually and push only this folder’s contents from a clean copy.
-=======
 # Animal_Livestock_And_Feed_calculator_ALAF
 Smart livestock nutrition calculator designed to formulate balanced feed rations and optimize feed costs
 >>>>>>> d5c8a77ddc3f580bcc67b04e3998e07f73f27f5d
