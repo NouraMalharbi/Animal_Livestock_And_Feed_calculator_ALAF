@@ -621,12 +621,16 @@ def inject_css():
             font-size: 0.90rem;
             font-weight: 800;
             margin-bottom: 2px;
+            direction: rtl;
+            text-align: right;
         }}
         .price-panel-caption {{
             color: #888;
             font-size: 0.68rem;
             line-height: 1.45;
             margin-bottom: 10px;
+            direction: rtl;
+            text-align: right;
         }}
         .price-panel-available-box {{
             border: 1px solid #E5E7EB;
@@ -2441,11 +2445,13 @@ GAUGE_CARD_CSS = """
   color: #7a5500;
   margin: 0;
   direction: rtl;
+  text-align: right;
 }
 .rec-missing-price-alert-sub {
   font-size: 0.60rem;
   color: #8B6A1B;
   margin-top: 2px;
+  text-align: right;
 }
 @media (max-width: 700px) {
   .rec-card-top,
