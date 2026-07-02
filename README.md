@@ -1,4 +1,12 @@
 # Alaf
+## علف 
+ حاسبة رقمية لدعم قرارات تغذية الماشية من خلال توصيات مبنية على الاحتياج الغذائي، و تقدير 
+ الكميات والتكاليف وإعداد تقارير التغذية
+.
+
+احدى حلول البرنامج الوطني لتطوير قطاع الثروة الحيوانية والسمكية
+
+
 
 Arabic Streamlit application for building livestock feed recommendations, estimating feed quantities, and generating printable feeding-plan reports for farms.
 
