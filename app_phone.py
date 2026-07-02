@@ -19,8 +19,7 @@ from pathlib import Path
 # إعدادات عامة
 # =========================
 st.set_page_config(
-    page_title="علف -حاسبة الاعلاف ",
-    page_icon="🌿",
+    page_title="علف . حاسبة الأعلاف ",
     layout="centered",
 )
 
@@ -1053,7 +1052,7 @@ st.markdown(
     f"""
     <div class="app-hero">
         {logo_tag}
-        <div class="app-hero-title">علف - حاسبة الاعلاف </div>
+        <div class="app-hero-title">علف . حاسبة الأعلاف </div>
         <div class="app-hero-subtitle">
             ضأن <span class="gold-dot"></span>
             ماعز <span class="gold-dot"></span>
