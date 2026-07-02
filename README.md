@@ -1,23 +1,23 @@
-# Livestock Feed Calculator
+# Alaf
 
 Arabic Streamlit application for building livestock feed recommendations, estimating feed quantities, and generating printable feeding-plan reports for farms.
 
 ## Project Scope
 
-This project contains multiple working versions of the calculator and related utilities:
+This repository contains the standalone `alaf` app in two UI variants:
 
-- `branded_feed_calulatr_V7.py`
-  Main desktop-focused Streamlit version.
-- `phone-display.py`
-  Mobile-focused Streamlit version with responsive layout overrides for smaller screens.
-- `Livestock_feed_calculator_pkg/app.py`
-  Packaged app entry point.
-- `Livestock_NRC_v2 _final.xlsx`
-  Source nutrition and feed-bank workbook used by the calculator.
-- `white_logo_nlfdp.png`
+- `app_desktop.py`
+  Main desktop-oriented Streamlit version.
+- `app_phone.py`
+  Mobile-oriented Streamlit version with phone-specific layout adjustments.
+- `data/Livestock_NRC_v2.xlsx`
+  Nutrition and feed-bank workbook used by the calculator.
+- `assets/white_logo_nlfdp.png`
   Web app logo.
-- `NLFDP.png`
+- `assets/NLFDP_full.png`
   Printable report logo.
+- `requirements.txt`
+  Python dependencies for both app variants.
 
 ## Features
 
@@ -26,15 +26,11 @@ This project contains multiple working versions of the calculator and related ut
 - Use market feed prices when available, with manual override support
 - Estimate bag counts, cost per head, and whole-farm cost
 - Generate printable feeding-plan reports
-- Separate mobile-oriented app version for phone viewing
+- Provide separate desktop and phone app variants
 
 ## Requirements
 
-The packaged app requirements file is located at:
-
-`Livestock_feed_calculator_pkg/requirements.txt`
-
-Dependencies:
+Dependencies listed in `requirements.txt`:
 
 - `streamlit`
 - `pandas`
@@ -44,77 +40,55 @@ Dependencies:
 
 ## Installation
 
-From the project folder:
+From the repository root:
 
 ```bash
-cd transit/Norah/Livstock_Feed_calulator
 python -m venv .venv
 source .venv/bin/activate
-pip install -r Livestock_feed_calculator_pkg/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Running The App
 
-Desktop-oriented version:
+Desktop version:
 
 ```bash
-streamlit run branded_feed_calulatr_V7.py
+streamlit run app_desktop.py
 ```
 
-Phone-oriented version:
+Phone version:
 
 ```bash
-streamlit run phone-display.py
+streamlit run app_phone.py
 ```
-
-Packaged app version:
-
-```bash
-streamlit run Livestock_feed_calculator_pkg/app.py
-```
-
-## Data Files
-
-The calculator depends on local project files, especially:
-
-- `Livestock_NRC_v2 _final.xlsx`
-- logo image files in the project root
-
-If you move the app to a new machine or repository, keep these files in the same relative locations unless you also update the file paths in the scripts.
 
 ## Repository Structure
 
 ```text
-Livstock_Feed_calulator/
-├── branded_feed_calulatr_V5.py
-├── branded_feed_calulatr_V6.py
-├── branded_feed_calulatr_V7.py
-├── phone-display.py
-├── Livestock_NRC_v2 _final.xlsx
-├── NLFDP.png
-├── white_logo_nlfdp.png
-├── Livestock_feed_calculator_pkg/
-│   ├── app.py
-│   └── requirements.txt
-└── daily_captures/
+alaf/
+├── app_desktop.py
+├── app_phone.py
+├── requirements.txt
+├── README.md
+├── assets/
+│   ├── NLFDP_full.png
+│   └── white_logo_nlfdp.png
+└── data/
+    └── Livestock_NRC_v2.xlsx
 ```
+
+## Data And Assets
+
+The app depends on local relative paths inside this repository:
+
+- `data/Livestock_NRC_v2.xlsx`
+- `assets/white_logo_nlfdp.png`
+- `assets/NLFDP_full.png`
+
+If you move files, update the paths in both app scripts.
 
 ## Notes
 
-- The app interface is primarily in Arabic.
+- The UI is primarily in Arabic.
+- The desktop and phone apps share the same calculation logic, with different layout tuning.
 - The printable report uses a different logo asset from the web app.
-- Market-price extraction and comparison helper scripts are included in the repository, but they are not required to run the main Streamlit app.
-
-## Suggested GitHub Repo Setup
-
-If you want to publish this folder as a standalone GitHub repository, a typical flow is:
-
-```bash
-cd transit/Norah/Livstock_Feed_calulator
-git init
-git add .
-git commit -m "Initial commit: livestock feed calculator"
-gh repo create livestock-feed-calculator --public --source=. --remote=origin --push
-```
-
-If this folder remains inside a larger repository, you may prefer to create a new GitHub repo manually and push only this folder’s contents from a clean copy.
