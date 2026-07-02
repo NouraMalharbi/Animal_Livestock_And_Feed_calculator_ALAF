@@ -248,6 +248,26 @@ def inject_css():
             background: {LIGHT_BG};
             margin-top: 10px;
             line-height: 2.4;
+            direction: rtl;
+            text-align: right;
+        }}
+        .chip-badge {{
+            direction: rtl;
+        }}
+        .section-card,
+        .price-panel-section,
+        .price-panel-available-box,
+        .price-panel-available-row,
+        .price-panel-feed-label,
+        .checkout-feed-heading,
+        .rec-grid-header,
+        .rec-col-title,
+        .rec-card-footer-wide {{
+            direction: rtl;
+            text-align: right;
+        }}
+        .metric-strip {{
+            justify-content: flex-start;
         }}
 
         /* ── V5: feed selection + pricing, merged section ────────────── */
