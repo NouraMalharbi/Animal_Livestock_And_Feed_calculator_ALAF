@@ -497,12 +497,14 @@ def inject_css():
 
         /* ── V5 checkout-style feed pricing ───────────────────────── */
         .checkout-feed-heading {{
-            display: inline-block;
+            display: table;
             padding: 5px 13px;
             border-radius: 999px;
-            margin: 6px 0 8px;
+            margin: 6px 0 8px auto;
             font-size: 0.78rem;
             font-weight: 800;
+            direction: rtl;
+            text-align: right;
         }}
         .checkout-feed-heading.plain {{
             background: #E8F7ED;
@@ -690,7 +692,7 @@ def inject_css():
 
         /* ── Status badge (market price) ───────────────────────────── */
         .status-ok-badge {{
-            display: inline-block;
+            display: table;
             background: #E8F7ED;
             color: #166534;
             border: 1px solid #B7E4C4;
@@ -698,7 +700,9 @@ def inject_css():
             font-size: 0.72rem;
             font-weight: 700;
             padding: 3px 10px;
-            margin-bottom: 10px;
+            margin: 0 0 10px auto;
+            direction: rtl;
+            text-align: right;
         }}
 
         /* ── Streamlit widget overrides ────────────────────────────── */
@@ -2436,6 +2440,7 @@ GAUGE_CARD_CSS = """
   line-height: 1.4;
   color: #7a5500;
   margin: 0;
+  direction: rtl;
 }
 .rec-missing-price-alert-sub {
   font-size: 0.60rem;
